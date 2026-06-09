@@ -10,8 +10,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Person-centred counselling and psychotherapy with Jen Phillips, BACP-registered. Online, telephone and in-person sessions." },
       { property: "og:title", content: "Clear Skies Counselling" },
       { property: "og:description", content: "A calm, non-judgemental space for therapy in Southampton, online and by phone." },
-      { rel: "canonical", href: "/" } as never,
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
