@@ -39,6 +39,10 @@ jobs:
         run: bun install --frozen-lockfile
       - name: Build static site
         run: bun run build
+      - name: Add SPA fallback (404.html) and disable Jekyll
+        run: |
+          cp dist/client/index.html dist/client/404.html
+          touch dist/client/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
