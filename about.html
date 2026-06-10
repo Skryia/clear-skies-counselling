@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Jen — Clear Skies Counselling</title>
+    <meta name="description" content="Meet Jen Phillips, BA (Hons), MBACP, MBICA — a person-centred psychotherapist based in Southampton." />
+    <link rel="canonical" href="/about.html" />
+    <meta property="og:title" content="About Jen Phillips — Clear Skies Counselling" />
+    <meta property="og:description" content="A qualified, BACP-registered psychotherapist offering safe, non-judgemental counselling in Southampton and online." />
+    <meta property="og:image" content="/assets/img/about-room.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <path d="M3 16c2-3 5-3 7 0s5 3 7 0 4-3 4-3" />
+              <circle cx="6" cy="8" r="2" />
+            </svg>
+          </span>
+          <span class="brand__name">Clear Skies <span>Counselling</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="contact.html" class="btn btn--primary">Book a session</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu"><span></span></button>
+      </div>
+      <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container grid grid-12 reveal">
+          <div class="col-7">
+            <span class="eyebrow">About</span>
+            <h1>Hello, I'm Jen.</h1>
+            <p style="font-size: 1.1rem; max-width: 36rem;">
+              I'm a qualified psychotherapist and counsellor at Clear Skies Counselling.
+              My work centres on creating a safe, non-judgemental space where you can really
+              explore what's going on for you — in a way that's often hard to do anywhere else.
+            </p>
+          </div>
+          <div class="col-5">
+            <img src="assets/img/about-room.jpg" alt="A calm, sunlit therapy space" style="border-radius: var(--radius-lg); aspect-ratio: 1; object-fit: cover; width: 100%;" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid-12 reveal">
+          <div class="col-5"><h2>Qualifications &amp; ethics</h2></div>
+          <div class="col-7">
+            <p>I hold a BA (Hons) in counselling and psychotherapy with experience supporting children, young people and adults.</p>
+            <p>I'm a registered member of the <strong>British Association for Counselling and Psychotherapy (BACP)</strong> and the <strong>British Infertility Counselling Association (BICA)</strong>, and I practise within their ethical frameworks. I hold full professional indemnity insurance.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid-12 reveal">
+          <div class="col-5"><h2>How I work</h2></div>
+          <div class="col-7">
+            <p>I work in a person-centred way. That means you lead — you set the pace, the direction and the depth. My role is to listen carefully, hold the space, and offer therapeutic and psychological support along the way.</p>
+            <p>The world is busy and fast-moving. It's easy to lose your train of thought, internalise difficult feelings, and forget your own worth. Therapy is simply a tool — one you can use to find your way back to yourself.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="card reveal" style="display: grid; gap: 1.5rem;">
+            <div>
+              <h2>Curious if we'd be a good fit?</h2>
+              <p>A short conversation is the easiest place to start.</p>
+            </div>
+            <div><a href="contact.html" class="btn btn--primary">Get in touch</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>
+          <h3>Clear Skies Counselling</h3>
+          <p>A calm, non-judgemental space for therapy. Putting your wellbeing first.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <p>Rownhams House<br />Rownhams, Southampton<br />SO16 8LF</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:Jenphillips85@outlook.com">Jenphillips85@outlook.com</a></p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div class="container">
+          <p>© <span id="year"></span> Clear Skies Counselling. All rights reserved.</p>
+          <p>Registered member of the BACP &amp; BICA</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
