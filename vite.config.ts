@@ -22,6 +22,10 @@ export default defineConfig({
     // served by any static host (GitHub Pages, S3, Netlify static, etc.).
     spa: {
       enabled: true,
+      // Use a non-"/" mask path so the SPA fallback shell is written to
+      // `_shell.html` without overwriting the prerendered `index.html` for
+      // the home route.
+      maskPath: "/_shell",
       prerender: {
         enabled: true,
         crawlLinks: true,
