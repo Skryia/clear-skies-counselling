@@ -17,19 +17,12 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
-    // Build the app as a fully static SPA with prerendered HTML for every
-    // discoverable route. Output is written to `dist/client/` and can be
-    // served by any static host (GitHub Pages, S3, Netlify static, etc.).
-    spa: {
+    // Prerender every discoverable route to plain HTML. Output is written
+    // to `dist/client/` and can be served by any static host (GitHub Pages,
+    // S3, Netlify static, etc.).
+    prerender: {
       enabled: true,
-      // Use a non-"/" mask path so the SPA fallback shell is written to
-      // `_shell.html` without overwriting the prerendered `index.html` for
-      // the home route.
-      maskPath: "/_shell",
-      prerender: {
-        enabled: true,
-        crawlLinks: true,
-      },
+      crawlLinks: true,
     },
   },
 });
