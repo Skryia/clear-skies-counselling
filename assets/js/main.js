@@ -35,16 +35,6 @@ $(function () {
     $reveal.addClass("is-visible");
   }
 
-  // Contact form -> mailto handoff
-  $("#contact-form").on("submit", function (e) {
-    e.preventDefault();
-    var name = $("#name").val() || "";
-    var email = $("#email").val() || "";
-    var message = $("#message").val() || "";
-    var subject = encodeURIComponent("Enquiry from " + (name || "website"));
-    var body = encodeURIComponent(message + "\n\n— " + name + "\n" + email);
-    window.location.href =
-      "mailto:Jenphillips85@outlook.com?subject=" + subject + "&body=" + body;
-    $("#contact-submit").text("Opening your email…");
-  });
+  // Contact form submission is handled natively by the form's `action`
+  // attribute (external PHP handler). No JS interception here.
 });
