@@ -45,17 +45,31 @@ $(function () {
 });
 
 // Submit Form Submission API.
-async function submitAPIForm() {
-  alert("testing");
+async function submitAPIForm(formRef) {
+  let form;
+  if (formRef instanceof HTMLFormElement) {
+    form = formRef;
+  } else if (typeof formRef === "string") {
+    form = document.getElementById(formRef);
+  } else if (typeof event !== "undefined" && event && event.target) {
+    form = event.target.closest("form");
+  }
+
+  if (!form) {
+    console.error("submitAPIForm: No form found.");
+    return;
+  }
+
   const formData = {
     send_to: "moye.akindele@gmail.com",
     subject: "Clear Skies Contact Form",
-
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    //phone: document.getElementById("phone").value,
-    message: document.getElementById("message").value,
   };
+
+  for (const el of form.elements) {
+    if (el.name && !el.disabled) {
+      formData[el.name] = el.value;
+    }
+  }
 
   const response = await fetch("https://skryia.com/wp-json/skryia/v1/contact", {
     method: "POST",
@@ -66,6 +80,5 @@ async function submitAPIForm() {
   });
 
   const result = await response.json();
-
   console.log(result);
 }
