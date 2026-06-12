@@ -48,7 +48,7 @@ $(function () {
 async function submitAPIForm() {
   alert("testing");
   const formData = {
-    send_to: "skryia.one@gmail.com",
+    send_to: "moye.akindele@gmail.com",
     subject: "Clear Skies Contact Form",
 
     name: document.getElementById("name").value,
