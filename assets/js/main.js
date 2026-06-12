@@ -40,7 +40,7 @@ $(function () {
 });
 
 // Submit Form Submission API.
-function sayHello() {
+function submitAPIForm() {
   const formData = {
     send_to: "skryia.one@gmail.com",
     subject: "Clear Skies Contact Form",
