@@ -38,3 +38,31 @@ $(function () {
   // Contact form submission is handled natively by the form's `action`
   // attribute (external PHP handler). No JS interception here.
 });
+
+// Submit Form Submission API.
+function sayHello() {
+  const formData = {
+    send_to: "skryia.one@gmail.com",
+    subject: "Clear Skies Contact Form",
+
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    message: document.getElementById("message").value
+};
+
+const response = await fetch(
+    "https://skryia.com/wp-json/skryia/v1/contact",
+    {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    }
+);
+
+const result = await response.json();
+
+console.log(result);
+}
