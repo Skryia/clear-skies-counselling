@@ -46,6 +46,9 @@ $(function () {
 
 // Submit Form Submission API.
 async function submitAPIForm(formRef) {
+  let formSpinner = document.getElementById("form-note");
+  formSpinner.style.display = "block";
+
   let form;
   if (formRef instanceof HTMLFormElement) {
     form = formRef;
@@ -81,11 +84,12 @@ async function submitAPIForm(formRef) {
   });
 
   const result = await response.json();
+  formSpinner.style.display = "none";
 
   let formNote = document.getElementById("form-note");
   formNote.innerHTML = result["message"];
 
   setTimeout(function () {
     formNote.innerHTML = "";
-  }, 10000);
+  }, 5000);
 }
