@@ -87,5 +87,5 @@ async function submitAPIForm(formRef) {
 
   setTimeout(function () {
     formNote.innerHTML = "";
-  }, 1000);
+  }, 10000);
 }
