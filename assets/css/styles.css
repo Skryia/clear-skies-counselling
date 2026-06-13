@@ -692,7 +692,7 @@ blockquote {
 }
 
 #loader {
-  display: none;
+  /* display: none; */
 }
 
 /* Safari */
