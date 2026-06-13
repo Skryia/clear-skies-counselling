@@ -686,6 +686,10 @@ blockquote {
   font-size: 10px;
 }
 
+.form-message {
+  display: flex;
+}
+
 /* Safari */
 @-webkit-keyframes spin {
   0% {
