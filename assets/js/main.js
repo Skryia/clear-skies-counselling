@@ -81,11 +81,12 @@ async function submitAPIForm(formRef) {
   });
 
   const result = await response.json();
+  const resultObj = JSON.parse(result);
   console.log(result);
 
   let formNote = document.getElementById("form-note");
-  formNote.innerHTML = result["message"];
+  formNote.innerHTML = resultObj.["message"];
   setTimeout(function () {
-    formNote.innerHTML = result;
+    formNote.innerHTML = '';
   }, 1000);
 }
