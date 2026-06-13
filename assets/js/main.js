@@ -84,7 +84,7 @@ async function submitAPIForm(formRef) {
   console.log(result);
 
   let formNote = document.getElementById("form-note");
-  formNote.innerHTML = result;
+  formNote.innerHTML = result["message"];
   setTimeout(function () {
     formNote.innerHTML = result;
   }, 1000);
