@@ -82,4 +82,7 @@ async function submitAPIForm(formRef) {
 
   const result = await response.json();
   console.log(result);
+
+  formNote = document.getElementById("form-note");
+  formNote.innerText = result;
 }
