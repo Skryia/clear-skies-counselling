@@ -81,8 +81,9 @@ async function submitAPIForm(formRef) {
   });
 
   const result = await response.json();
-  const resultObj = JSON.parse(result);
+  //const resultObj = JSON.parse(result);
   console.log(result);
+  console.log(result["message"]);
 
   let formNote = document.getElementById("form-note");
   formNote.innerHTML = resultObj["message"];
