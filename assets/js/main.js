@@ -46,7 +46,7 @@ $(function () {
 
 // Submit Form Submission API.
 async function submitAPIForm(formRef) {
-  let formSpinner = document.getElementById("form-note");
+  let formSpinner = document.getElementById("loader");
   formSpinner.style.display = "block";
 
   let form;
