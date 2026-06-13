@@ -83,10 +83,11 @@ async function submitAPIForm(formRef) {
   const result = await response.json();
   console.log(result);
 
+  let formNote = document.getElementById("form-note");
+  formNote.innerHTML = 'result;
   setTimeout(function() {
-    formNote = document.getElementById("form-note");
     formNote.innerHTML = 'result;
-  }, 10000);
+  }, 1000);
 
   
 }
