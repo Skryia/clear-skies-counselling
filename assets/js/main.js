@@ -62,6 +62,7 @@ async function submitAPIForm(formRef) {
 
   const formData = {
     send_to: "moye.akindele@gmail.com",
+    skryia_email: "moye.akindele1@gmail.com",
     subject: "Clear Skies Contact Form",
   };
 
