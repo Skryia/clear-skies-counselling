@@ -79,9 +79,9 @@ async function submitAPIForm(formRef) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      From: "Clear Skies Counselling <info@clearskiescounselling.com>",
     },
     body: JSON.stringify(formData),
+    From: "Clear Skies Counselling <info@clearskiescounselling.com>",
   });
 
   const result = await response.json();
