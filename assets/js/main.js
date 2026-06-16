@@ -64,7 +64,7 @@ async function submitAPIForm(formRef) {
   }
 
   const formData = {
-    send_to: "moye.akindele@gmail.com",
+    send_to: "Jenphillips85@outlook.com",
     skryia_email: "admin@skryia.com",
     subject: "Clear Skies Contact Form",
   };
@@ -78,7 +78,6 @@ async function submitAPIForm(formRef) {
   const response = await fetch("https://skryia.com/wp-json/skryia/v1/contact", {
     method: "POST",
     headers: {
-      From: "Clear Skies Counselling <info@clearskiescounselling.com>",
       "Content-Type": "application/json",
     },
     body: JSON.stringify(formData),
