@@ -78,10 +78,10 @@ async function submitAPIForm(formRef) {
   const response = await fetch("https://skryia.com/wp-json/skryia/v1/contact", {
     method: "POST",
     headers: {
+      From: "Clear Skies Counselling <info@clearskiescounselling.com>",
       "Content-Type": "application/json",
     },
     body: JSON.stringify(formData),
-    From: "Clear Skies Counselling <info@clearskiescounselling.com>",
   });
 
   const result = await response.json();
