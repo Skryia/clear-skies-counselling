@@ -1,4 +1,4 @@
-/* Clear Skies Counselling — site behaviours (jQuery) */
+./* Clear Skies Counselling — site behaviours (jQuery) */
 $(function () {
   // Highlight the active nav link based on current page
   var path = window.location.pathname.split("/").pop() || "index.html";
@@ -46,9 +46,11 @@ $(function () {
 
 // Submit Form Submission API.
 async function submitAPIForm(formRef) {
+  // Display spinner to show loading.
   let formSpinner = document.getElementById("loader");
   formSpinner.style.display = "block";
 
+  // Check if form is initialised.
   let form;
   if (formRef instanceof HTMLFormElement) {
     form = formRef;
@@ -62,19 +64,21 @@ async function submitAPIForm(formRef) {
     console.error("submitAPIForm: No form found.");
     return;
   }
-
+  // Initialise form data.
   const formData = {
     send_to: "Jenphillips85@outlook.com",
     skryia_email: "admin@skryia.com",
     subject: "Clear Skies Contact Form",
   };
 
+  // Add all remaining form input to formData.
   for (const el of form.elements) {
     if (el.name && !el.disabled) {
       formData[el.name] = el.value;
     }
   }
 
+  // Call the API and parse in formData.
   const response = await fetch("https://skryia.com/wp-json/skryia/v1/contact", {
     method: "POST",
     headers: {
@@ -83,6 +87,7 @@ async function submitAPIForm(formRef) {
     body: JSON.stringify(formData),
   });
 
+  // Dissable spinner and display message.
   const result = await response.json();
   formSpinner.style.display = "none";
 
