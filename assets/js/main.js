@@ -1,4 +1,4 @@
-./* Clear Skies Counselling — site behaviours (jQuery) */
+/* Clear Skies Counselling — site behaviours (jQuery) */
 $(function () {
   // Highlight the active nav link based on current page
   var path = window.location.pathname.split("/").pop() || "index.html";
