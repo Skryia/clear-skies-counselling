@@ -66,9 +66,9 @@ async function submitAPIForm(formRef) {
   }
   // Initialise form data.
   const formData = {
-    send_to: "Jenphillips85@outlook.com",
+    _sendto: "Jenphillips85@outlook.com",
     skryia_email: "admin@skryia.com",
-    subject: "Clear Skies Contact Form",
+    _subject: "Clear Skies Contact Form",
   };
 
   // Add all remaining form input to formData.
