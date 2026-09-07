@@ -79,7 +79,7 @@ async function submitAPIForm(formRef) {
   }
 
   // Call the API and parse in formData.
-  const response = await fetch("https://skryia.com/wp-json/skryia/v1/contact", {
+  const response = await fetch("https://skryia.com/API/Forms/submit.php", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
